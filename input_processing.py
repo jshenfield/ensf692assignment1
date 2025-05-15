@@ -50,7 +50,7 @@ class Sensor:
                 self.light = original_light
             else:
                 self.light = value2
-  
+
 
         # If user is referring to pedestrian, update pedestrian
         # If user gives an invalid value, print that and reset pedestrian to original value
@@ -106,8 +106,12 @@ def main():
     vehicle = 'no'
     x = True
 
+    # create my sensor
+    sensor1 = Sensor(light, pedestrian, vehicle)
+
+    # run through the program
     while(x == True):
-        sensor1 = Sensor(light, pedestrian, vehicle)
+     
         sensor1.update_status()
         print_message(sensor1)
 
